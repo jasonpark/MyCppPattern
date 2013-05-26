@@ -26,6 +26,7 @@ static Res accumlate(std::function<Res()> call, std::function<Res()> next)
    return call();
 }
 
+/* Type Inference : see Professional C++ pp. 741 */
 template<typename Call, typename NextCall>
 static auto accumlate(Call call, NextCall next) ->decltype(call()+next())
 {
