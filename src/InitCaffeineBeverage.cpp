@@ -16,6 +16,10 @@ void init_Beverages()
    std::vector<CaffeineBeverage *> beverages;
    beverages.push_back(&coffee);
    beverages.push_back(&tea);
+
+   for(auto x:beverages)
+     x->prepare();
+   return;
 }
 
    
