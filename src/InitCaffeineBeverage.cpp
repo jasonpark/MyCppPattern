@@ -1,7 +1,6 @@
 #include <functional>
 #include <vector>
 #include "CaffeineBeverage.h"
-#include "RecipeIf.h"
 
 using std::bind;
 
