@@ -10,7 +10,7 @@ SOURCES=$(wildcard *.cpp)
 OBJS:=$(SOURCES:.cpp=.o) 
 DEPS=$(SOURCES:.cpp=.d)
 
-TARGET=coffe
+TARGET=coffee
 all:$(TARGET)
 $(TARGET):$(OBJS)
 	$(CXX) -o $(LDFAGS) $@ $(OBJS) $(LDLIBS)
