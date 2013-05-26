@@ -18,3 +18,10 @@ class Milk
   static std::string description() { return "-Milk-";}
   static float price() { return 0.13f;}
 };
+
+template<typename Res>
+static Res accumluate(std::function<Res()> call, std::function<Res()> next)
+{
+   if(next) return call()+ next();
+   return call();
+}
