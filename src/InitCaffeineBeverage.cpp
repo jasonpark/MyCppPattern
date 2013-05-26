@@ -17,9 +17,8 @@ void init_Beverages()
    beverages.push_back(&coffee);
    beverages.push_back(&tea);
 
-   for(auto x:beverages)
-     x->prepare();
-   return;
+   for(auto beverage:beverages)
+     beverage->prepare();
 }
 
    
