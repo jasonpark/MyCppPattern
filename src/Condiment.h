@@ -20,8 +20,16 @@ class Milk
 };
 
 template<typename Res>
-static Res accumluate(std::function<Res()> call, std::function<Res()> next)
+static Res accumlate(std::function<Res()> call, std::function<Res()> next)
 {
    if(next) return call()+ next();
    return call();
 }
+
+template<typename Call, typename NextCall>
+static auto accumlate(Call call, NextCall next) ->decltype(call()+next())
+{
+   if(next) return call()+next();
+   return call();
+} 
+
