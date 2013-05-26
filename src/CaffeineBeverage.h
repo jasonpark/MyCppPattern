@@ -7,11 +7,21 @@ class CaffeineBeverage
 {
    std::function<int()> amountWaterMl;
    std::function<void()> brew;
+   void boilWater(int ml)
+   {
+     std::cout << "boil Water of " <<ml << "milli litter\n";
+   }
+
 public:
   CaffeineBeverage(std::function<int()> amountWaterMl, std::function<void()> brew)
    : brew(brew)
    , amountWaterMl(amountWaterMl)
    {}
+  void prepare() 
+  {
+    boilWater(amountWaterMl());
+    brew();
+  }
 };
 
 static void brewCoffee()
