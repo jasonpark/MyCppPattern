@@ -2,5 +2,5 @@
 
 int main()
 {
-  init_CaffeineBeverage();
+ init_Beverages();
 }
